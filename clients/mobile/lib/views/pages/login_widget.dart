@@ -58,6 +58,22 @@ class _LogInWidgetState extends State<LogInWidget> {
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
+                      LayoutBuilder(builder:
+                          (BuildContext context, BoxConstraints constraints) {
+                        return Padding(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 0.0,
+                              horizontal: constraints.maxWidth * 0.3375),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(
+                                constraints.maxWidth * 0.05),
+                            child: Image.asset(
+                              "assets/ramble_icon.png",
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        );
+                      }),
                       Align(
                         alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Column(
